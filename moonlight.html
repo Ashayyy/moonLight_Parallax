@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type=text/css href="moonlight.css">
+</head>
+<body>
+
+
+    <header>
+        <a href="http://127.0.0.1:5500/parallaxpratice.html#"  class="logo" >Logo</a>
+        <ul>
+            <li> <a href="http://127.0.0.1:5500/parallaxpratice.html#" class="active" >Home</a> </li>
+            <li> <a href="#">About</a> </li>
+            <li> <a href="#">Work</a> </li>
+            <li> <a href="#">Contact</a> </li>
+        </ul>
+    </header>
+
+
+    <section>
+        <img src="images/stars.png" id="stars">
+        <img src="images/moon.png" id="moon">
+     
+        <img src="images/mountains_behind.png" id="mountains_behind">
+        
+        <h2 id="text">Moonlight</h2>
+        <a href="https://moon.nasa.gov/" id="btn" target="_blank">Explore</a>
+
+        <img src="images/mountains_front.png" id="mountains_front" >
+
+        
+    </section>
+
+    <div class="sec">
+       <h2>The Moon : Inside and Out</h2>
+       <p>Earth's Moon is the brightest and largest object in our night sky. The Moon makes Earth a more livable planet by moderating our home planet's wobble on its axis, leading to a relatively stable climate. It also causes tides, creating a rhythm that has guided humans for thousands of years.
+        The Moon was likely formed after a Mars-sized body collided with Earth several billion years ago.
+        Earth's only natural satellite is simply called "the Moon" because people didn't know other moons existed until Galileo Galilei discovered four moons orbiting Jupiter in 1610. In Latin, the Moon was called Luna, which is the main adjective for all things Moon-related: lunar.</p>
+       <br>
+       <p>Earth's Moon has inspired stories since the first humans looked up at the sky and saw its gray, cratered surface. Some observers saw among the craters the shape of a person's face, so stories refer to a mysterious "man in the Moon." Hungrier observers compared the craters to cheese and dreamed of an entire sphere made of delicious dairy products.
+        The Moon made its film debut in a 1902 black and white silent French film called "Le Voyage Dans la Lune" ("A Trip to the Moon"). And a year before astronauts walked on the Moon, "2001: A Space Odyssey" (1968) told the story of astronauts on an outpost on the Moon.
+        American astronauts have planted six American flags on the Moon. But that doesn't mean the United States has claimed it; in fact, an international law written in 1967 prevents any single nation from owning planets, stars, or any other natural objects in space.</p>
+       <br>
+       <p>On the Moon, snow does not fall. Thunder never rolls. No clouds form in the pitch-black sky. “Weather” on the Moon means something completely different than it does on Earth. The lunar climate is dominated by temperature swings of hundreds of degrees, incoming space rocks of all sizes, and particles and energy traveling from the Sun and beyond.</p>
+       <br>
+       <p>Searing heat and bone-chilling cold are both common on the Moon, and changes in temperature are quick and dramatic, because the Moon doesn’t have an atmosphere like Earth does. One cubic centimeter of Earth’s atmosphere contains one hundred trillion times as many molecules as the same amount of space near the lunar surface. In other words, the lunar environment is almost empty, but not quite. The barely-there layer of gas around the Moon is called an exosphere.
+        The lunar exosphere is too skimpy to trap or spread the Sun’s energy, so differences between sunlit and shadowed areas on the Moon are extreme. Temperatures near the Moon’s equator can spike to 250°F (121°C) in daylight, then plummet after nightfall to -208°F (-133°C). In deep craters near the Moon’s poles, permanent shadows keep the surface even colder — NASA’s Lunar Reconnaissance Orbiter has measured temperatures lower than -410°F (-246°C). These forever-dark places harbor ice deposits that may be billions of years old.
+        The Moon’s exosphere is much too thin to produce weather as we know it on Earth. Instead, lunar “weather” comes straight from space.</p>
+        <br>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.0 + 'px';
+            text.style.marginRight = value * 8.5 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px' ;
+            
+            btn.style.marginTop= value * 2.07 + 'px';
+            mountains_front.style.top = value * 0 + 'px' ;
+            
+            
+        });
+
+    </script>
+</body>
+</html>
